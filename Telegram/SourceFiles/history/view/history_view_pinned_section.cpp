@@ -625,7 +625,7 @@ CopyRestrictionType PinnedWidget::listCopyRestrictionType(
 
 CopyRestrictionType PinnedWidget::listCopyMediaRestrictionType(
 		not_null<HistoryItem*> item) {
-	return CopyMediaRestrictionTypeFor(_history->peer, item);
+	return CopyRestrictionType::None;
 }
 
 CopyRestrictionType PinnedWidget::listSelectRestrictionType() {

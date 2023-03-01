@@ -1272,13 +1272,6 @@ CopyRestrictionType ScheduledWidget::listCopyRestrictionType(
 
 CopyRestrictionType ScheduledWidget::listCopyMediaRestrictionType(
 		not_null<HistoryItem*> item) {
-	if (const auto media = item->media()) {
-		if (const auto invoice = media->invoice()) {
-			if (invoice->extendedMedia) {
-				return CopyMediaRestrictionTypeFor(_history->peer, item);
-			}
-		}
-	}
 	return CopyRestrictionType::None;
 }
 

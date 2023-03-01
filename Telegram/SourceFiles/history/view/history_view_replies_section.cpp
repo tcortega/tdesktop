@@ -2525,7 +2525,7 @@ CopyRestrictionType RepliesWidget::listCopyRestrictionType(
 
 CopyRestrictionType RepliesWidget::listCopyMediaRestrictionType(
 		not_null<HistoryItem*> item) {
-	return CopyMediaRestrictionTypeFor(_history->peer, item);
+	return CopyRestrictionType::None;
 }
 
 CopyRestrictionType RepliesWidget::listSelectRestrictionType() {
